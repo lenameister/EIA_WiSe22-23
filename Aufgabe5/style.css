@@ -1,0 +1,74 @@
+header {
+    background-image: url(img/header1.png);
+    height: 400px;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+
+body {
+    font-family: verdana;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+#navi {
+    text-align: right;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+}
+
+#navi li {
+    display: inline;
+}
+
+#navi a:link {
+    text-decoration: none;
+    color: grey;
+    font-size: 15pt;
+}
+
+#navi a:visited {
+    text-decoration: none;
+    color: grey;
+    font-size: 15pt;
+}
+
+#navi a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+footer {
+    background-color: #eaeaea;
+
+    font-size: 12pt;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img.image:hover{
+    width: 33%;
+}
+
+img.icons{
+    opacity: 0.5;
+}
