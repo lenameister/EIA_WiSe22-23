@@ -1,6 +1,9 @@
 header {
-    background-image: url(img/header1.png);
+    background-image: url(img/header1.jpg);
     height: 400px;
+    animation-name: slideshow;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
 }
 
 .container {
@@ -10,16 +13,28 @@ header {
 }
 
 body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
     font-family: verdana;
     color: black;
 }
 
 h1 {
     text-align: center;
+    font-family: 'Cinzel';
+    font-size: 30pt;
+}
+
+h2 {
+    font-family: 'Cinzel';
+    font-size: 25pt;
 }
 
 #navi {
     text-align: right;
+    font-family: 'Cinzel';
+    font-size: 35pt;
 }
 
 #logo {
@@ -45,7 +60,7 @@ h1 {
 
 #navi a:hover {
     text-decoration: underline;
-    color: black;
+    color: white;
 }
 
 footer {
@@ -65,10 +80,48 @@ a {
     color: black;
 }
 
-img.image:hover{
-    width: 33%;
+.image {
+    opacity: 0.5;
 }
 
-img.icons{
+img.image:hover {
+    width: 32%;
+    opacity: 1;
+}
+
+img.icons {
     opacity: 0.5;
+}
+
+img.icons:hover {
+    opacity: 1;
+}
+
+@keyframes slideshow {
+
+    0%,
+    50% {
+        background-image: url("img/header1.jpg");
+    }
+
+    50%,
+    100% {
+        background-image: url("img/header2.jpg");
+    }
+
+    100%{
+        background-image: url("img/header1.jpg");
+    }
+}
+
+.störer{
+    float: right;
+    position: sticky;
+    top: 0;
+    width: 20%;
+}
+
+input{
+    font-size: 25pt;
+    width: 40%;
 }
