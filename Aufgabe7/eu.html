@@ -55,7 +55,7 @@
                 <img src="images/finland.png" height="76px" class="finland">
                 <h5>Finnland</h5>
             </div>
-            <div class="wrapper active">
+            <div class="wrapper">
                 <img src="images/france.png" height="76px" class="france">
                 <h5>Frankreich</h5>
             </div>
@@ -128,29 +128,36 @@
         </div>
     </nav>
 
-    <img src="images/eu_stars.png" class="stars">
-    <h1>
-        Einwohnerzahl in der europäischen Union
-    </h1>
-
     <main>
+        <div class="chartStarWrapper">
+            <img src="images/eu_stars.png" class="stars">
+
+            <div class="chartWrapper">
+                <div class="chart"></div>
+            </div>
+        </div>
+
+        <h1>
+            Einwohnerzahl in der europäischen Union
+        </h1>
+
         <section>
-            <h2>65,48Mio</h2>
+            <h2 id="einwohnerzahl">65,48Mio</h2>
             <p>Gesamtzahl Einwohnerinnen und Einwohner in Frankreich in 2022</p>
         </section>
 
         <section>
-            <h2>14%</h2>
+            <h2 id="RzurEU">14%</h2>
             <p>Relativ zur Gesamtzahl in der EU</p>
         </section>
 
         <section>
-            <h2>5,1%</h2>
+            <h2 id="wachstumsrate">5,1%</h2>
             <p>Wachstumsrate seit 2008</p>
         </section>
 
         <section>
-            <h2>3,34Mio</h2>
+            <h2 id="wachstumszahl">3,34Mio</h2>
             <p>Wachstumsrate gesamt zwischen 2008 and 2022</p>
         </section>
     </main>

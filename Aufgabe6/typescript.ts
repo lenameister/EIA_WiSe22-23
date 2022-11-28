@@ -40,3 +40,5 @@ console.log("Realtiv zur EU hat Italien " + ItalienEU.toFixed(2) + " % Einwohner
 
 var RumänienEU = (Rumänien22 / EU22) * 100;
 console.log("Realtiv zur EU hat Rumänien " + RumänienEU.toFixed(2) + " % Einwohner");
+
+
