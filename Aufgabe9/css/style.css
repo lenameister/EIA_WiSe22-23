@@ -1,0 +1,63 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color:#000000;
+    text-align: center;
+}
+
+.all {
+    width: 150px;
+    height: 150px;
+    margin: 4px 2px;
+    border-width: 1px;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+.drum {
+    background-image: linear-gradient(#9cb5ff, #1852ff)
+}
+
+.notes {
+    background-image: linear-gradient( #ffa6f2,#ff0ada)
+}
+
+.laugh {
+    background-image: linear-gradient( #ffc174,#ff9006);
+}
+
+.all:hover {
+    opacity: 0.5;
+}
+
+.fas:hover {
+    opacity: 0.5;
+}
+
+.fa-play {
+    color: #ffffff;
+    font-size: 70px;
+    margin: 5px;
+}
+
+.fa-retweet {
+    color: #ffffff;
+    font-size: 70px;
+    margin: 5px;
+}
+
+.fa-trash-alt {
+    color: #ffffff;
+    font-size: 70px;
+    margin: 5px;
+}
+
+
+.fa-pause {
+    color: #ffffff;
+    font-size: 70px;
+    margin: 5px;
+}
