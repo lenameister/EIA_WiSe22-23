@@ -1,3 +1,4 @@
+namespace A09 {
 console.log("hello world");
 
 
@@ -80,4 +81,5 @@ function playRemix() {
         document.querySelector("#play").setAttribute("class", "fas fa-play");
         clearInterval(myInterval);
     }
+}
 }

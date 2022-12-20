@@ -1,5 +1,5 @@
+namespace A08 {
 console.log("hello world");
-
 
 const sounds = [
     new Audio("assets/hihat.mp3"),
@@ -35,3 +35,4 @@ function playBeat() {
     }, 500);
 }
 document.querySelector("#playbutton").addEventListener("click", function () { playBeat(); });
+}
