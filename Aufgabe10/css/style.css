@@ -12,7 +12,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h2 {
+h1 {
     font-size: 45px;
 }
 
@@ -29,7 +29,7 @@ input {
     font-size: 16px;
 }
 
-.addBtn {
+#btn {
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
@@ -40,6 +40,70 @@ input {
     cursor: pointer;
 }
 
-.addBtn:hover {
+#btn:hover {
     opacity: 0.5;
+}
+
+p {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 180px;
+}
+
+#neuesDiv {
+    font-size: 15px;
+    float: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+}
+
+#eingabe {
+    position: absolute;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.fa-trash {
+    font-size: 20px;
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 10px;
+    opacity: 50%;
+}
+
+.fa-circle {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    opacity: 50%;
+}
+
+.fa-check-circle {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    opacity: 100%;
+}
+
+
+.addline {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+#addtask {
+    width: 250px;
+    border-style: solid;
+    text-align: center;
+}
+
+#button {
+    width: 50px;
+    font-size: 35px;
 }
