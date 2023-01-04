@@ -1,17 +1,17 @@
 var A10;
 (function (A10) {
     window.addEventListener("load", function () {
-        let counter = 0;
+        let index = 0;
         let input = document.querySelector("#textfield");
-        document.querySelector("#addtn").addEventListener("click", newTask);
+        document.querySelector("#btn").addEventListener("click", newTask);
         function newTask() {
-            counter++;
-            document.querySelector("todocounter").innerHTML = String(counter + " in total");
+            index++;
+            document.querySelector("#todoAmount").innerHTML = String(index + " in total");
             let eingabefeld = document.createElement("p");
             eingabefeld.innerHTML = input.value;
             input.value = "";
-            let task = document.getElementById("task");
             let check = document.createElement("div");
+            let task = document.getElementById("task");
             let trash = document.createElement("div");
             let wrapper = document.createElement("div");
             wrapper.textContent = "";
@@ -21,8 +21,8 @@ var A10;
             wrapper?.appendChild(trash);
             task?.appendChild(wrapper);
             eingabefeld.id = "eingabe";
-            wrapper.id = "neuesDiv";
             check.className = "far fa-circle";
+            wrapper.id = "neuesDiv";
             trash.className = "fas fa-trash";
             check.addEventListener("click", erledigteToDos);
             function erledigteToDos() {
@@ -36,8 +36,8 @@ var A10;
             trash.addEventListener("click", deleteToDo);
             function deleteToDo() {
                 wrapper.parentElement.removeChild(wrapper);
-                counter--;
-                document.querySelector("#todoAmount").innerHTML = String(counter + " in total");
+                index--;
+                document.querySelector("#todoAmount").innerHTML = String(index + " in total");
             }
         }
         document.addEventListener("keydown", function (event) {

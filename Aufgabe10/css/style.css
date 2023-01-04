@@ -1,47 +1,44 @@
 * {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
 }
 
-.header {
-    background-color: #5e8581;
-    padding: 30px 40px;
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: #4b7c4b;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height: 710px;
+}
+
+.app {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
-    font-size: 45px;
+    text-align: center;
+    font-size: 60px;
+    color: #ffffff;
 }
 
-h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
+h4 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.task {
+    text-align: absolute;
+    margin-top: 60px;
 }
 
 input {
-    border: none;
-    width: 40%;
-    padding: 10px;
-    float: center;
-    font-size: 16px;
-}
-
-#btn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: center;
-    text-align: center;
     font-size: 20px;
-    cursor: pointer;
-}
-
-#btn:hover {
-    opacity: 0.5;
+    width: 350px;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 p {
@@ -50,18 +47,30 @@ p {
     margin-left: 180px;
 }
 
+#btn {
+    font-size: 30px;
+    color: #ffffff;
+    position: absolute;
+    margin-left: 10px;
+}
+
+#btn:hover {
+    opacity: 0.5;
+}
+
 #neuesDiv {
     font-size: 15px;
     float: center;
     margin-top: 10px;
     border-radius: 10px;
-    width: 350px;
+    width: 400px;
     height: 40px;
 }
 
 #eingabe {
     position: absolute;
     font-size: 18px;
+    color: #ffffff;
     margin-top: 10px;
     margin-left: 50px;
 }
@@ -72,6 +81,7 @@ p {
     margin-left: 320px;
     margin-top: 10px;
     opacity: 50%;
+    color: #ffffff;
 }
 
 .fa-circle {
@@ -79,7 +89,8 @@ p {
     position: absolute;
     margin-top: 10px;
     margin-left: 10px;
-    opacity: 50%;
+    opacity : 50%;
+    color: #ffffff;
 }
 
 .fa-check-circle {
@@ -88,13 +99,15 @@ p {
     margin-top: 10px;
     margin-left: 10px;
     opacity: 100%;
+    color: #ffffff;
 }
 
 
+
 .addline {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
+display: flex;
+justify-content: space-between;
+height: 50px;
 }
 
 #addtask {
