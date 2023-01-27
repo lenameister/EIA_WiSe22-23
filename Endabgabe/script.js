@@ -16,6 +16,7 @@ let questions;
 let currentQuestion;
 let score = 0;
 let scoreNumber;
+//ermöglicht es score number laden zu lassen
 document.addEventListener("DOMContentLoaded", hndLoad);
 function hndLoad(_event) {
     scoreNumber = document.querySelector("#score-number");
@@ -30,7 +31,7 @@ let htmlQuestions = [
             { text: "<span>", correct: false },
             { text: "<a>", correct: false }
         ],
-        link: "https://www.w3schools.com/html/html_images.asp"
+        link: "Das <p>  Tag stellt einen Absatz dar: https://www.w3schools.com/html/html_elements.asp"
     },
     {
         question: "Was ist HTML?",
@@ -40,17 +41,17 @@ let htmlQuestions = [
             { text: "Hypertext Media Language", correct: false },
             { text: "Hyperlink Text Media Language", correct: false },
         ],
-        link: "https://www.w3schools.com/html/html_images.asp"
+        link: "HTML ist Auszeichnungprache zur Strukturierung von Webseiten: https://www.schulhomepage.de/webdesign/html"
     },
     {
         question: "Welches ist die niedrigste Überschriftenebene in HTML?",
         answers: [
-            { text: "h8", correct: true },
-            { text: "h6", correct: false },
+            { text: "h6", correct: true },
+            { text: "h3", correct: false },
             { text: "h4", correct: false },
             { text: "h1", correct: false },
         ],
-        link: "https://www.w3schools.com/html/html_images.asp"
+        link: "Überschriften werden mit den Ebenen 1 bis 6 ausgezeichnet: https://www.edv-lehrgang.de/ueberschriften-in-html/"
     },
     {
         question: "Wie leitet man einen HTML-Kommentar ein?",
@@ -60,7 +61,7 @@ let htmlQuestions = [
             { text: "/*kommentar*/", correct: false },
             { text: "#kommentar", correct: false },
         ],
-        link: "https://www.w3schools.com/html/html_images.asp"
+        link: "https://praxistipps.chip.de/html-code-auskommentieren-so-gehts_47676"
     },
     {
         question: "Wie zeigt man in HTML ein Bild an?",
@@ -82,7 +83,8 @@ let cssQuestions = [
             { text: ".class", correct: false },
             { text: "element", correct: false },
             { text: "*", correct: false }
-        ]
+        ],
+        link: "https://www.w3schools.com/cssref/sel_id.php"
     },
     {
         question: "Wofür steht CSS?",
@@ -91,7 +93,8 @@ let cssQuestions = [
             { text: "Color Style Sheets", correct: false },
             { text: "Code Style System", correct: false },
             { text: "Color Sheet System", correct: false },
-        ]
+        ],
+        link: "https://www.atinternet.com/de/glossar/css/"
     },
     {
         question: "Was ist das Ziel von CSS?",
@@ -100,7 +103,8 @@ let cssQuestions = [
             { text: "Programmierung vereinfachen", correct: false },
             { text: "Interaktivität erhöhen", correct: false },
             { text: "Ladezeit von Webseiten verkürzen", correct: false },
-        ]
+        ],
+        link: "https://www.ionos.de/digitalguide/websites/webdesign/was-ist-css/"
     },
     {
         question: "Welches Pseudoelement kann verwendet werden, um ein Element beim Klicken zu ändern?",
@@ -109,7 +113,8 @@ let cssQuestions = [
             { text: ":hover", correct: false },
             { text: ":visited", correct: false },
             { text: ":first-child", correct: false },
-        ]
+        ],
+        link: "https://www.w3schools.com/css/css_image_transparency.asp"
     },
     {
         question: "Wie kann man die Hintergrundfarbe ändern?",
@@ -118,7 +123,8 @@ let cssQuestions = [
             { text: "color", correct: false },
             { text: "backcolor", correct: false },
             { text: "font-color", correct: false },
-        ]
+        ],
+        link: "https://www.w3schools.com/css/css_background.asp"
     },
 ];
 //5 Fragen zu TS 
@@ -130,7 +136,8 @@ let typescriptQuestions = [
             { text: "let variableName", correct: false },
             { text: "const variableName", correct: false },
             { text: "let variableName: type", correct: true }
-        ]
+        ],
+        link: "https://digitale-rundschau.de/javascript/typescript-lernen-grundlagen/"
     },
     {
         question: "Was ist TypeScript?",
@@ -139,7 +146,8 @@ let typescriptQuestions = [
             { text: "Ersatzsprache für JavaScript", correct: false },
             { text: "Komplexere Programmiersprache als JavaScript", correct: false },
             { text: "Vereinfachte Programmiersprache zu JavaScript", correct: false },
-        ]
+        ],
+        link: "https://t3n.de/news/eigentlich-typescript-859869/"
     },
     {
         question: "Wozu dient der Befehl 'tsc' im Kontext von TypeScript?",
@@ -148,7 +156,8 @@ let typescriptQuestions = [
             { text: "Um TS-Code auszuführen", correct: false },
             { text: "Um Fehler im TS-Code zu finden", correct: false },
             { text: "Um TS-Code zu komprimieren", correct: false },
-        ]
+        ],
+        link: "https://code.visualstudio.com/docs/typescript/typescript-compiling"
     },
     {
         question: "Kann man TS ohne transpilieren direkt in einem Browser ausführen?",
@@ -157,7 +166,8 @@ let typescriptQuestions = [
             { text: "Ja", correct: false },
             { text: "Nur Teils", correct: false },
             { text: "Kommt auf den Browser an", correct: false },
-        ]
+        ],
+        link: "https://www.helmbergers.com/ts-node"
     },
     {
         question: "Kann man existierenden JS-Code in TS umwandeln?",
@@ -166,7 +176,8 @@ let typescriptQuestions = [
             { text: "Nein, er kann nicht in TS umgewandelt werden", correct: false },
             { text: "Ja, aber nur mit bestimmten Tools oder Methoden", correct: false },
             { text: "Nein, er muss neu geschrieben werden, um in TS verwendet zu werden", correct: false },
-        ]
+        ],
+        link: "https://www.computerwoche.de/a/was-javascript-von-typescript-unterscheidet,3548614"
     },
 ];
 //5 Gemischte Fragen
@@ -178,7 +189,8 @@ let mixedQuestions = [
             { text: "Hyperlink Text Markup Language", correct: false },
             { text: "Hypertext Media Language", correct: false },
             { text: "Hyperlink Text Media Language", correct: false },
-        ]
+        ],
+        link: "HTML ist Auszeichnungprache zur Strukturierung von Webseiten: https://www.schulhomepage.de/webdesign/html"
     },
     {
         question: "Wie wird eine ID im CSS ausgewählt?",
@@ -187,7 +199,8 @@ let mixedQuestions = [
             { text: ".class", correct: false },
             { text: "element", correct: false },
             { text: "*", correct: false }
-        ]
+        ],
+        link: "https://www.w3schools.com/cssref/sel_id.php"
     },
     {
         question: "Wie kann man die Hintergrundfarbe ändern?",
@@ -196,7 +209,8 @@ let mixedQuestions = [
             { text: "color", correct: false },
             { text: "backcolor", correct: false },
             { text: "font-color", correct: false },
-        ]
+        ],
+        link: "https://www.w3schools.com/css/css_background.asp"
     },
     {
         question: "Wie wird eine Variable in TypeScript deklariert?",
@@ -205,7 +219,8 @@ let mixedQuestions = [
             { text: "let variableName", correct: false },
             { text: "const variableName", correct: false },
             { text: "let variableName: type", correct: true }
-        ]
+        ],
+        link: "https://digitale-rundschau.de/javascript/typescript-lernen-grundlagen/"
     },
     {
         question: "Was ist TypeScript?",
@@ -214,7 +229,8 @@ let mixedQuestions = [
             { text: "Ersatzsprache für JavaScript", correct: false },
             { text: "Komplexere Programmiersprache als JavaScript", correct: false },
             { text: "Vereinfachte Programmiersprache zu JavaScript", correct: false },
-        ]
+        ],
+        link: "https://t3n.de/news/eigentlich-typescript-859869/"
     },
 ];
 //HTML Klick Events auf die Buttons legen
@@ -274,7 +290,7 @@ function shuffleAnswers(answers) {
 }
 //Funktion wird aufgerufen, wenn eine Antwort ausgewählt wird. Sie überprüft, ob die ausgewählte Antwort korrekt ist,
 //und gibt dem Benutzer eine Rückmeldung entsprechend. Es erhöht den Punktestand, wenn die Antwort korrekt ist,
-//und geht zur nächsten Frage oder beendet die Runde, wenn alle Fragen beantwortet wurden.#
+//und geht zur nächsten Frage oder beendet die Runde, wenn alle Fragen beantwortet wurden.
 function checkAnswer(event) {
     const clickedButton = event.target;
     const clickedAnswer = clickedButton.innerText;
@@ -282,10 +298,6 @@ function checkAnswer(event) {
     if (correct) {
         score++;
         scoreNumber.textContent = score.toString();
-        // let link: HTMLAnchorElement = new HTMLAnchorElement();
-        // link.href = questions[currentQuestion].link;
-        // link.innerText = "Hier";
-        // alert("Richtige Antwort, zum nachlesen: " + link); //Funktioniert leider nicht :(
         alert("Richtige Antwort, zum nachlesen: " + questions[currentQuestion].link);
     }
     else {

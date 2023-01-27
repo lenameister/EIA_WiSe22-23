@@ -13,11 +13,11 @@ const answer3 = document.getElementById("answer-3");
 const answer4 = document.getElementById("answer-4");
 const answers = document.getElementById("answers");
 
-let category;
-let questions;
-let currentQuestion;
-let score = 0;
-let scoreNumber : HTMLElement;
+let category: string;
+let questions: any;
+let currentQuestion: any;
+let score: number = 0;
+let scoreNumber: HTMLElement;
 
 //ermöglicht es score number laden zu lassen
 document.addEventListener("DOMContentLoaded", hndLoad);
@@ -27,7 +27,7 @@ function hndLoad(_event: Event): void {
 }
 
 //5 Fragen zu HTML
-let htmlQuestions = [
+let htmlQuestions:any = [
   {
     question: "Welches Element wird verwendet, um einen Absatz darzustellen?",
     answers: [
@@ -85,7 +85,7 @@ let htmlQuestions = [
 ];
 
 //5 Fragen zu CSS
-let cssQuestions = [
+let cssQuestions: any = [
   {
     question: "Wie wird eine ID im CSS ausgewählt?",
     answers: [
@@ -143,7 +143,7 @@ let cssQuestions = [
 ];
 
 //5 Fragen zu TS 
-let typescriptQuestions = [
+let typescriptQuestions: any = [
   {
     question: "Wie wird eine Variable in TypeScript deklariert?",
     answers: [
@@ -202,7 +202,7 @@ let typescriptQuestions = [
 
 
 //5 Gemischte Fragen
-let mixedQuestions = [
+let mixedQuestions: any = [
   {
     question: "Was ist HTML?",
     answers: [
@@ -262,46 +262,49 @@ let mixedQuestions = [
 
 //HTML Klick Events auf die Buttons legen
 htmlButton.addEventListener("click", () => {
-  category = "html";
-  questions = htmlQuestions;
+  let category: string = "html";
+  let questions: string[] = htmlQuestions;
   startQuiz();
 });
 
 cssButton.addEventListener("click", () => {
-  category = "css";
-  questions = cssQuestions;
+  let category: string = "css";
+  let questions: string[] = cssQuestions;
   startQuiz();
 });
 
 typescriptButton.addEventListener("click", () => {
-  category = "typescript";
-  questions = typescriptQuestions;
+  let category: string = "typescript";
+  let questions: string[] = typescriptQuestions;
   startQuiz();
 });
 
 mixedButton.addEventListener("click", () => {
-  category = "mixed";
-  questions = mixedQuestions;
+  let category: string = "mixed";
+  let questions: string[] = mixedQuestions;
   startQuiz();
 });
 
-//Funktion wird aufgerufen, wenn eine Kategorie ausgewählt wird.
-//Sie stellt die Fragen-Sektion sichtbar und mischt die Fragen mit der Funktion shuffleQuestions().
+
+//wird aufgerufen, wenn Kategorie ausgewählt wird.
+//stellt die Fragen-Sektion sichtbar und mischt die Fragen mit der Funktion shuffleQuestions().
 //Dann wird die erste Frage mit der Funktion showQuestion() angezeigt.
-function startQuiz() {
+function startQuiz(): void {
   questionSection.style.display = "block";
-  currentQuestion = 0;
+  let currentQuestion: number = 0;
   shuffleQuestions();
   showQuestion();
 }
 
-function shuffleQuestions() {
-  for (let i = questions.length - 1; i > 0; i--)
-  {
+//mischt fragen
+function shuffleQuestions(questions: any[]): any[] {
+  for (let i = questions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [questions[i], questions[j]] = [questions[j], questions[i]];
   }
+  return questions;
 }
+
 
 function showQuestion() {
   const current = questions[currentQuestion];
@@ -317,6 +320,7 @@ function showQuestion() {
   answer4.addEventListener("click", checkAnswer);
 }
 
+//mischt antworten
 function shuffleAnswers(answers) {
   for (let i = answers.length - 1; i > 0; i--)
   {
@@ -325,10 +329,10 @@ function shuffleAnswers(answers) {
   }
 }
 
-//Funktion wird aufgerufen, wenn eine Antwort ausgewählt wird. Sie überprüft, ob die ausgewählte Antwort korrekt ist,
+// wird aufgerufen, wenn Antwort ausgewählt wird, überprüft, ob die ausgewählte Antwort korrekt ist,
 //und gibt dem Benutzer eine Rückmeldung entsprechend. Es erhöht den Punktestand, wenn die Antwort korrekt ist,
 //und geht zur nächsten Frage oder beendet die Runde, wenn alle Fragen beantwortet wurden.
-function checkAnswer(event) {
+function checkAnswer(event: any) {
   const clickedButton = event.target;
   const clickedAnswer = clickedButton.innerText;
   const correct = questions[currentQuestion].answers.find(a => a.text === clickedAnswer).correct;
